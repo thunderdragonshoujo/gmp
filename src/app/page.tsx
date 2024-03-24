@@ -7,12 +7,12 @@ import InfoHeader from './InfoHeader'
 
 const page = () => {
   return (
-    <div className="wrapper">
+    <>
     <Header/>
     <InfoHeader/>
     <ShadCaro/>
     <Footer/>
-    </div>
+    </>
   )
 }
 

@@ -8,13 +8,13 @@ import store from '../../../redux/store'
 
 const page = () => {
   return (
-    <>
+    <div className=''>
     <Provider store={store}>
     <Header/>
     <Magnetron/>
     <Footer/>
     </Provider>
-    </>
+    </div>
   )
 }
 

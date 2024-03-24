@@ -19,9 +19,26 @@ import { useDispatch } from 'react-redux';
         price:69.90,
         imgSrc:"/2M229E.JPG",
         imgAlt:"",
-        desc:"A basic part with great qualities a good value."
-        }
-        ];
+        desc:"A basic part with great qualities a good value.",
+        },
+        {
+                id:"GMP-2M229E-EH",
+								partType:"Magnetron",
+                product:"2M229E-EH",
+                price:69.90,
+                imgSrc:"/2M229E-EH.JPG",
+								desc:"A basic part with great qualities a good value.",
+        },
+            
+             {
+                id:"GMP-2M229E",
+								partType:"Magnetron",
+                product:"2M229E",
+                price:69.90,
+                imgSrc:"/2M229E.JPG",
+								desc:"A basic part with great qualities a good value.",
+             }
+        ]
 
 export default function Magnetron() {
 
