@@ -8,10 +8,8 @@ import InfoHeader from './InfoHeader'
 const page = () => {
   return (
     <>
-    <Header/>
     <InfoHeader/>
     <ShadCaro/>
-    <Footer/>
     </>
   )
 }

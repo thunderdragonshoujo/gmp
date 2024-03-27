@@ -4,8 +4,9 @@ import { Card } from '@/components/ui/card'
 
 const AboutUs = () => {
   return (
-		<Card className='flex justify-center'>
-  <div className="">
+	<div className=''>
+<Card className='flex justify-center'>
+  <div>
   <Image 
   src="/map-img.png"
   width={100}
@@ -39,6 +40,7 @@ const AboutUs = () => {
 		<br />
   </div>
 		</Card>
+		</div>
   )
 }
 

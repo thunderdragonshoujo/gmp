@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "./HeaderFullNav";
+import Footer from "./Footer";
 
 
 export const metadata: Metadata = {
@@ -13,8 +15,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <>
     <html lang="en">
-      <body className="min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500">{children}</body>
+      <body className="bg-gradient-to-r from-cyan-500 to-blue-500">
+      <Header/>
+      {children}
+      <Footer/>
+      </body>
     </html>
+    </>
   );
 }

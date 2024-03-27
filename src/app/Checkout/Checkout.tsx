@@ -10,6 +10,7 @@ import {
 import styles from './CartPage.module.css';
 import { Button } from '@/components/ui/button';
 import axios from 'axios';
+import { randomUUID } from 'crypto';
 
 
 
@@ -32,6 +33,11 @@ const CheckoutPage = () => {
       (accumulator, item) => accumulator + item.quantity * item.price,
       0
     );
+  }
+
+  const getordernumber = () => {
+    return Math.floor(Math.random()* 1000).toString()
+
   };
 
   return (
@@ -70,7 +76,8 @@ const CheckoutPage = () => {
               <p>$ {item.quantity * item.price}</p>
             </div>
           ))}
-          <Button onClick={() =>onSubmit(cart)}>Checkout Grand Total: $ {getTotalPrice()}</Button>
+          <div className='text-lg font-extrabold text-white'>Please call 1-800-325-8488 to make payment</div>
+          <Button onClick={() =>onSubmit(cart)}>click to confirm order number {getordernumber()} with a Grand Total $ {getTotalPrice()}</Button>
         </>
       )}
     </div>

@@ -31,7 +31,7 @@ import { useDispatch } from 'react-redux';
         },
             
              {
-                id:"GMP-2M229E",
+                id:"GMP-2M229E2",
 								partType:"Magnetron",
                 product:"2M229E",
                 price:69.90,

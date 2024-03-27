@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 function Footer() {
     return (
-		<div className='app min-h-screen flex items-end justify-center'>
-    <div className="flex justify-center sticky bottom-0 items-start space-x-4 border-t-8 border-black px-20 py-1 max-md:flex-row w-full gap-y-10  body-text bg-black text-white">		
+		<div className='app min-h-screen flex items-end justify-end'>
+    <div className="flex justify-center sticky bottom-0 space-x-4 border-t-8 border-black px-20 py-1 max-md:flex-row w-full gap-y-10  body-text bg-black text-white">		
 		<Link href={"/"}>Home</Link>
 		<Link href={"/PrivacyPolicy"}>Privacy Policy</Link>
 		<Link href={"/Copyright"}>Copyright</Link>

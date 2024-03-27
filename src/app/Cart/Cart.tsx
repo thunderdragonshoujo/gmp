@@ -9,6 +9,8 @@ import {
 } from '../../../redux/cart.slice';
 import styles from './CartPage.module.css';
 import { Button } from '@/components/ui/button';
+import { buttonVariants } from "@/components/ui/button"
+
 import Link from 'next/link';
 
 const CartPage = () => {
@@ -59,7 +61,7 @@ const CartPage = () => {
               <p>$ {item.quantity * item.price}</p>
             </div>
           ))}
-          <Link href='/Checkout'>Checkout Grand Total: $ {getTotalPrice()}</Link>
+          <Link className={buttonVariants({ variant: "outline" })}href='/Shipping'>Checkout Grand Total: $ {getTotalPrice()}</Link>
         </>
       )}
     </div>
