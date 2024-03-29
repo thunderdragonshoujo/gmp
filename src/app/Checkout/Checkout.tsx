@@ -6,6 +6,8 @@ import {
   incrementQuantity,
   decrementQuantity,
   removeFromCart,
+  clearCart,
+  cartReducer,
 } from '../../../redux/cart.slice';
 import styles from './CartPage.module.css';
 import { Button } from '@/components/ui/button';
@@ -22,7 +24,9 @@ const CheckoutPage = () => {
           url: "http://44.239.43.181:8080/LiftAndShift/post",
           data: cart,
           headers: { "Content-Type": "application/json" },
-        })
+        }).then((response) => {
+          dispatch(clearCart(cart));
+        });
     }
 
   const cart = useSelector((state) => state.cart);
@@ -62,17 +66,6 @@ const CheckoutPage = () => {
               <p>{item.product}</p>
               <p>$ {item.price}</p>
               <p>{item.quantity}</p>
-              <div className={styles.buttons}>
-                <button onClick={() => dispatch(incrementQuantity(item.id))}>
-                  +
-                </button>
-                <button onClick={() => dispatch(decrementQuantity(item.id))}>
-                  -
-                </button>
-                <button onClick={() => dispatch(removeFromCart(item.id))}>
-                  x
-                </button>
-              </div>
               <p>$ {item.quantity * item.price}</p>
             </div>
           ))}
