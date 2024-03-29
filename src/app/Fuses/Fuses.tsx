@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
     const products = [
         {
           id: "GLC_HD30",
-          partType: "Magnetron",
+          partType: "Fuses",
           product: "GLC_HD30",
           price: 69.90,
           imgSrc: "/GLC_HD30.JPG",
@@ -13,7 +13,7 @@ import { useDispatch } from 'react-redux';
         },
         {
         id:"GLC_FNMH",
-        partType:"Magnetron",
+        partType:"Fuses",
         product:"GLC_FNMH",
         price:69.90,
         imgSrc:"/GLC_FNMH.JPG",
