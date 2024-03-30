@@ -19,10 +19,14 @@ import { randomUUID } from 'crypto';
 const CheckoutPage = () => {
 
     function onSubmit(cart) {
+      const orderNumber = getordernumber();
         axios({
           method: "post",
           url: "http://44.239.43.181:8080/LiftAndShift/post",
-          data: cart,
+          data: {
+            orderNumber: orderNumber,
+            cart:cart,
+          },
           headers: { "Content-Type": "application/json" },
         }).then((response) => {
           dispatch(clearCart(cart));

@@ -1,0 +1,56 @@
+#!/bin/bash
+IMG_PATH="/Users/rmcclure/devl/uwaveInWork/public"
+open -na "google chrome" --args --new-window \
+file:////Users/rmcclure/devl/uwaveInWork/public/15928.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/22A316ZE.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M210.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M229E-EH.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M229E.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M229H.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M229H3H.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M240H-NS.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M240H.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M244.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M248E.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M248H-EH.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M248H-NS.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M248H.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M248J.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M248K-NS.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M248K.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M254H.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M254J.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/2M303H.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/4150019905.JPG \
+file:////Users/rmcclure/devl/uwaveInWork/public/4358059.JPG \
+
+
+
+#file:////Users/rmcclure/devl/uwaveInWork/public/57-030.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/GLC_0526.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/GLC_0529.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/GLC_0530.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/GLC_14-104_1-4.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/GLC_14-104_3-16.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/GLC_14-22A.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/GLC_3-A.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/GLC_3-M.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/GLC_4-20.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/GLC_FNMH.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/GLC_FNM_20.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/GLC_FNM_25.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/GLC_FNM_30.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/GLC_HD30.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/WB27X10249-EH.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/WB27X10249-NS-BH.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/WB27X10249.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/WB27X10505.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/WB27X1160.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/genericCapacitor.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/genericDiode.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/genericFuse.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/genericSwitch.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/0.97_MFD.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/0_90MF.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/1.00_MFD.JPG \
+#file:////Users/rmcclure/devl/uwaveInWork/public/1_0MF.JPG \
