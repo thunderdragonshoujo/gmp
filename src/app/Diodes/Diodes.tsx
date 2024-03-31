@@ -4,25 +4,63 @@ import { addToCart } from '../../../redux/cart.slice';
 import { useDispatch } from 'react-redux';
 
 
-    const products = [
-        {
-          id: "GLC_0526",
-          partType: "Diodes",
-          product: "GLC_0526",
-          price: 69.90,
-          imgSrc: "/GLC_0526.JPG",
-          imgAlt:"",
-        },
-        {
-        id:"GLC_0529",
-        partType:"Diodes",
-        product:"GLC_0529",
-        price:69.90,
-        imgSrc:"/GLC_0529.JPG",
-        imgAlt:"",
-        desc:"A basic part with great qualities a good value."
-        }
-        ];
+const products = [
+  {
+    id: "GLC_0526",
+    partType: "Diodes",
+    product: "GLC_0526",
+    price: "10.25",
+    imgSrc: "/GLC_0526.JPG",
+    imgAlt: "/GLC_0526.JPG",
+    desc:"A basic part with great qualities a good value."
+  },
+  {
+    id:"GLC_0529",
+    partType:"Diodes",
+    product:"GLC_0529",
+    price: "10.25",
+    imgSrc:"/GLC_0529.JPG",
+    imgAlt:"/GLC_0529.JPG",
+    desc:"A basic part with great qualities a good value."
+  },
+  {
+    id:"GLC_0530",
+    partType:"Diodes",
+    product:"GLC_0530",
+    price: "10.25",
+    imgSrc:"/GLC_0530.JPG",
+    imgAlt:"/GLC_0530.JPG",
+    desc:"A basic part with great qualities a good value."
+  },
+  {
+    id:"GLC_3-A",
+    partType:"Diodes",
+    product:"GLC_3-A",
+    price: "10.25",
+    imgSrc:"/GLC_3-A.JPG",
+    imgAlt:"/GLC_3-A.JPG",
+    desc:"A basic part with great qualities a good value."
+  },
+  {
+    id:"GLC_3-M",
+    partType:"Diodes",
+    product:"GLC_3-M",
+    price: "10.25",
+    imgSrc:"/GLC_3-M.JPG",
+    imgAlt:"/GLC_3-M.JPG",
+    desc:"A basic part with great qualities a good value."
+  },
+  {
+    id:"WB27X1160",
+    partType:"Diodes",
+    product:"WB27X1160",
+    price: "11.25",
+    imgSrc:"/WB27X1160.JPG",
+    imgAlt:"/WB27X1160.JPG",
+    desc:"A basic part with great qualities a good value."
+  }
+];
+
 export default function Diodes() {
   const dispatch = useDispatch();
     return (

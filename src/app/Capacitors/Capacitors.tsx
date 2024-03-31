@@ -4,28 +4,76 @@ import { addToCart } from '../../../redux/cart.slice';
 import { useDispatch } from 'react-redux';
 
 
-    const products = [
-        {
-          id: "0_90MF",
-          partType: "Capacitors",
-          product: "0_90MF",
-          price: 22.90,
-          imgSrc: "/0_90MF.JPG",
-          imgAlt:"",
-        },
-        {
-        id:"GMP-0.97_MFD",
-        partType:"Capacitors",
-        product:"GMP-0.97_MFD",
-        price: 22.90,
-        imgSrc:"/0.97_MFD.JPG",
-        imgAlt:"",
-        desc:"A basic part with great qualities a good value."
-        }
-        ];
+const products = [
+  {
+    id: "GMP-0_55MFD",
+    partType: "Capacitors",
+    product: "GMP-0_55MFD",
+    price: "22.90",
+    imgSrc: "/0_55MFD.JPG",
+    imgAlt: "/0_55MFD.JPG",
+    desc:"2500 VAC"
+  },
+  {
+    id: "GMP-0_63MFD",
+    partType: "Capacitors",
+    product: "GMP-0_63MFD",
+    price: "22.90",
+    imgSrc: "/0_63MFD.JPG",
+    imgAlt: "/0_63MFD.JPG",
+    desc:"2500 VAC"
+  },
+  {
+    id:"GMP-0.97_MFD",
+    partType:"Capacitors",
+    product:"GMP-0.97_MFD",
+    price: "22.90",
+    imgSrc:"/0.97_MFD.JPG",
+    imgAlt:"/0.97_MFD.JPG",
+    desc:"2100 VAC"
+  },
+  {
+    id:"GMP-1.00_MFD",
+    partType:"Capacitor",
+    product:"GMP-1.00 MFD",
+    price:"22.90",
+    imgSrc:"/1.00_MFD.JPG",
+    imgAlt:"/1.00_MFD.JPG",
+    desc:"2500 VAC"
+  },
+  {
+    id:"GMP-0.97_MFD",
+    partType:"Capacitor",
+    product:"GMP-0.97 MFD",
+    price:"22.90",
+    imgSrc:"/0.97_MFD.JPG",
+    imgAlt:"/0.97_MFD.JPG",
+    desc:"2500 VAC"
+  },
+  {
+    id:"GMP-1.00_MFD",
+    partType:"Capacitor",
+    product:"GMP-1.00 MFD",
+    price:"22.90",
+    imgSrc:"/1.00_MFD.JPG",
+    imgAlt:"/1.00_MFD.JPG",
+    desc:"2500 VAC"
+  },
+  {
+    id:"GMP-0.97_MFD",
+    partType:"Capacitor",
+    product:"GMP-0.97 MFD",
+    price: "22.90",
+    imgSrc:"/0.97_MFD.JPG",
+    imgAlt:"/0.97_MFD.JPG",
+    desc:"2500 VAC"
+  }
+];
+
 export default function Capacitors() {
 
   const dispatch = useDispatch();
+  var CurrencyFormat = require('react-currency-format');
 
     return (
       <div className="bg-gradient-to-r from-cyan-500 to-blue-500">
@@ -44,6 +92,7 @@ export default function Capacitors() {
                 </div>
                 <h3 className="mt-4 text-sm text-gray-700">{product.product}</h3>
                 <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
+                <p className="mt-1 text-lg font-medium text-gray-900">{product.desc}</p>
                 <Button onClick={() => dispatch(addToCart(product))}>add to cart</Button>
               </a>
             ))}

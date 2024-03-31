@@ -4,25 +4,45 @@ import { addToCart } from '../../../redux/cart.slice';
 import { useDispatch } from 'react-redux';
 
 
-    const products = [
-        {
-          id: "GLC_14-104_3_16",
-          partType: "Switch",
-          product: "GLC_14-104_3_16",
-          price: 69.90,
-          imgSrc: "/GLC_14-104_3_16.JPG",
-          imgAlt:"",
-          
-        },
-        {
-            id:"GMP-GLC_14-104_1_4",
-            partType:"Switch",
-            product:"GLC_14-104 1_4",
-            price:10.95,
-            imgSrc:"/GLC_14-104_1_4.JPG",
-            imgAlt:"",
-        }
-        ];
+const products = [
+  {
+    id:"GMP-GLC_14-104_1_4",
+    partType:"Switch",
+    product:"GLC_14-104 1_4",
+    price:"10.95",
+    imgSrc:"/GLC_14-104_1_4.JPG",
+    imgAlt:"/GLC_14-104_1_4.JPG",
+    desc:"16 Amps"
+  },
+  {
+    id: "GLC_14-104_3_16",
+    partType: "Switch",
+    product: "GLC_14-104_3_16",
+    price: "9.95",
+    imgSrc: "/GLC_14-104_3_16.JPG",
+    imgAlt: "/GLC_14-104_3_16.JPG",
+    desc:"16 Amps"
+  },
+  {
+    id:"GMP-GLC_14-22A",
+    partType:"Switch",
+    product:"GMP-GLC_14-22A",
+    price:"10.95",
+    imgSrc:"/GLC_14-22A.JPG",
+    imgAlt:"/GLC_14-22A.JPG",
+    desc:"22 Amps"
+  },
+  {
+    id: "GLC_22A316ZE",
+    partType: "Switch",
+    product: "GLC_22A316ZE",
+    price: "10.95",
+    imgSrc: "/22A316ZE.JPG",
+    imgAlt: "/22A316ZE.JPG",
+    desc:"22 Amps"
+  },
+];
+
 export default function Switches() {
   const dispatch = useDispatch();
     return (
@@ -42,6 +62,7 @@ export default function Switches() {
                 </div>
                 <h3 className="mt-4 text-sm text-gray-700">{product.product}</h3>
                 <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
+                <p className="mt-1 text-lg font-medium text-gray-900">{product.desc}</p>
                 <Button onClick={() => dispatch(addToCart(product))}>add to cart</Button>
               </a>
             ))}
