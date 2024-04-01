@@ -1,0 +1,28 @@
+[X] RAND GMP Checkin the latest verion of code to Clints repo
+[X] RAND GMP Fix images for the carousel
+[X] RAND GMP Fix the Tab Title to be GlobalMicrowaveParts
+[X] RAND GMP Fix the contents of the Meta-Data tags for SEO
+[X] RAND GMP Add orderNo to the post to the back-end
+[_] RAND GMP Me Fix the send contactUs email send
+[_] RAND GMP Me Fix the order contents email send
+[_] RAND GMP Get Clint Add Company-Name to ShipTo page as optional
+[_] RAND GMP Get Clint to fix much better ShipTo validations
+[_] RAND GMP Get Clint to add the TX tax calculation to the Order Conf
+[_] RAND GMP Get Clint to add the FedEx Logo to the main Header
+[_] RAND GMP Get Clint to fix display of all dollar and cent amounts
+[_] RAND GMP Me Perform a production optimized build
+[_] RAND GMP Me Rehost the site on SSL
+[_] RAND GMP Fix images in general as best we can
+[_] RAND GMP Create a better Order Confirmation page
+[_] RAND GMP Experiment with using GPT4 to build better tailwind
+[_] RAND GMP Check on the SiteMap stuff and make sure it is correct
+[_] RAND GMP Eventually provide single button deploy of Everything GMP
+[_] RAND GMP Provide a bettet generated orderNo
+[_] RAND GMP Add a Link to each Carousel Image for Extra Credit
+[_] RAND GMP Get Clint to optimize responsive resizing
+[_] RAND GMP Get Clint to optimize for mobile device sizes
+[_] RAND GMP Resize Checkout page to keep controls left-to-right
+[_] RAND GMP Add Link to Google Maps for Address in Header
+[_] RAND GMP Add Link to FedEx Logo that describes the Free Shipping Policy
+[_] RAND GMP Scan all the code and make cleanups and optimizations
+[_] RAND GMP Fix the Globe Logo for the Carousel to add GMP Text
