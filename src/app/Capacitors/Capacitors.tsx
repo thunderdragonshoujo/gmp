@@ -73,7 +73,7 @@ const products = [
 export default function Capacitors() {
 
   const dispatch = useDispatch();
-  var CurrencyFormat = require('react-currency-format');
+  
 
     return (
       <div className="bg-gradient-to-r from-cyan-500 to-blue-500">

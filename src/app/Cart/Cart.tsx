@@ -19,11 +19,14 @@ const CartPage = () => {
   const dispatch = useDispatch();
 
   const getTotalPrice = () => {
-    return cart.reduce(
-      (accumulator, item) => accumulator + item.quantity * item.price,
-      0
+    const totalPrice = cart.reduce(
+        (accumulator, item) => accumulator + item.quantity * item.price,
+        0
     );
-  };
+
+    // Use toFixed() to limit decimal places to 2
+    return totalPrice.toFixed(2);
+};
 
   return (
     <div className={styles.container}>
@@ -58,7 +61,7 @@ const CartPage = () => {
                   x
                 </button>
               </div>
-              <p>$ {item.quantity * item.price}</p>
+              <p>${(item.quantity * item.price).toFixed(2)}</p>
             </div>
           ))}
 <Link className={buttonVariants({ variant: "outline" })}href='/Shipping'>Checkout Grand Total: $ {getTotalPrice()}</Link>
