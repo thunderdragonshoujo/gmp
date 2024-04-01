@@ -61,7 +61,9 @@ const CartPage = () => {
               <p>$ {item.quantity * item.price}</p>
             </div>
           ))}
-          <Link className={buttonVariants({ variant: "outline" })}href='/Shipping'>Checkout Grand Total: $ {getTotalPrice()}</Link>
+          <Link href='/Shipping'>
+            <a className={buttonVariants({variant:"outline"})}>Checkout Grand Total: $ {getTotalPrice()}</a>
+          </Link>
         </>
       )}
     </div>

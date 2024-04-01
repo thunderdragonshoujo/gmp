@@ -6,7 +6,7 @@ const InfoHeader = () => {
     <div className='flex gap-8 columns-3 bg-black text-white'>
         <div>
             <h1 >Global Microwave Parts</h1>
-            <i className='text-[14px]'>For Retail customers,Call to setup a Wholesale Account</i>
+            <i className='text-[11px]'>Call to setup a Wholesale Account</i>
             </div>
         <div>
         <p>(P) 800-325-8488</p>

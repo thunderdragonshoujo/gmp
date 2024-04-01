@@ -24,7 +24,7 @@ const products = [
     desc:"2500 VAC"
   },
   {
-    id:"GMP-0.97_MFD",
+    id:"GMP-0.97_MFD_A",
     partType:"Capacitors",
     product:"GMP-0.97_MFD",
     price: "22.90",
@@ -33,7 +33,7 @@ const products = [
     desc:"2100 VAC"
   },
   {
-    id:"GMP-1.00_MFD",
+    id:"GMP-1.00_MFD_A",
     partType:"Capacitor",
     product:"GMP-1.00 MFD",
     price:"22.90",
@@ -42,7 +42,7 @@ const products = [
     desc:"2500 VAC"
   },
   {
-    id:"GMP-0.97_MFD",
+    id:"GMP-0.97_MFD_B",
     partType:"Capacitor",
     product:"GMP-0.97 MFD",
     price:"22.90",
@@ -51,7 +51,7 @@ const products = [
     desc:"2500 VAC"
   },
   {
-    id:"GMP-1.00_MFD",
+    id:"GMP-1.00_MFD_B",
     partType:"Capacitor",
     product:"GMP-1.00 MFD",
     price:"22.90",
@@ -60,7 +60,7 @@ const products = [
     desc:"2500 VAC"
   },
   {
-    id:"GMP-0.97_MFD",
+    id:"GMP-0.97_MFD_C",
     partType:"Capacitor",
     product:"GMP-0.97 MFD",
     price: "22.90",

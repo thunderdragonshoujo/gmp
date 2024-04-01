@@ -13,7 +13,7 @@ const products = [
     desc:"A basic part with great qualities a good value."
   },
   {
-    id:"GLC_FNMH",
+    id: "GLC_FNMH",
     partType:"Fuses",
     product:"GLC_FNMH",
     price:"11.95",
@@ -31,7 +31,7 @@ const products = [
     desc:"A basic part with great qualities a good value."
   },
   {
-    id:"GLC_FNM-25",
+    id: "GLC_FNM-25",
     partType:"Fuses",
     product:"GLC_FMN-25",
     price: "4.25",
@@ -49,7 +49,7 @@ const products = [
     desc:"A basic part with great qualities a good value."
   },
   {
-    id:"GLC_4-10",
+    id: "GLC_4-10",
     partType:"Fuses",
     product:"GLC_4-10",
     price: "2.50",
@@ -67,7 +67,7 @@ const products = [
     desc:"A basic part with great qualities a good value."
   },
   {
-    id:"GLC_4-15",
+    id: "GLC_4-15",
     partType:"Fuses",
     product:"GLC_4-15",
     price: "2.50",
@@ -85,7 +85,7 @@ const products = [
     desc:"A basic part with great qualities a good value."
   },
   {
-    id:"GLC_4-25",
+    id: "GLC_4-25",
     partType:"Fuses",
     product:"GLC_4-25",
     price: "2.50",
