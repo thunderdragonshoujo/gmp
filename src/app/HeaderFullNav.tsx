@@ -2,11 +2,15 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import CartWidget from './CartWiget';
+import { Provider } from 'react-redux';
+import store from '../../redux/store';
+
 
 
 function Header() {
-    
     return (
+      <Provider store={store}>
         <div>
           <nav className="flex justify-inbetween space-x-4 items-center mx-auto bg-black text-white">
             <div>
@@ -47,13 +51,11 @@ function Header() {
                     <button>Fuses</button>
                   </div>
                 </Link>
-                <Link href="/Cart">
-                  <div>
-                    <button>Cart</button>
-                  </div>
-                </Link>
-                </nav> 
+                <CartWidget/>
+                
+                </nav>
                 </div>
+                </Provider>
                 
                
         
