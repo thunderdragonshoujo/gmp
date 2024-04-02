@@ -52,7 +52,14 @@ function Header() {
                   </div>
                 </Link>
                 <CartWidget/>
-                
+                <div className='justify-end'>
+            
+            <Image src='/FedEx-200px.png' 
+            alt="Globe Logo" 
+            height={100}
+            width={100}/>
+            
+            </div>
                 </nav>
                 </div>
                 </Provider>

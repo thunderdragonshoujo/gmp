@@ -23,13 +23,13 @@ const formSchema = z.object({
   firstname: z.string().max(50).optional(),
   lastname: z.string().max(50).optional(),
   companyName:z.string().max(50).optional(),
-  email: z.string().min(2).max(50),
+  email: z.string().email().min(2).max(50),
   phone: z.string().max(50).optional(),
   street1: z.string().min(2).max(50),
   street2: z.string().min(0).max(50).optional(),
   city: z.string().min(2).max(50),
-  state: z.string().min(2).max(50),
-  zip: z.string().min(2).max(50),
+  state: z.string().min(2).max(2),
+  zip: z.string().min(5).max(10),
 })
 
 export default function ShippingForm() {

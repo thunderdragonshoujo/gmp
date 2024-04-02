@@ -17,10 +17,10 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
 const formSchema = z.object({
-  useremail: z.string().min(2, {
+  useremail: z.string().email().min(2, {
     message: "Username must be at least 2 characters.",
-  }),
-  userFeedback: z.string().optional()
+  }).max(50),
+  userFeedback: z.string().max(4000).optional()
 })
 
 export default function ContactUs() {
