@@ -11,6 +11,10 @@ import {
 import styles from './CartPage.module.css';
 import { Button } from '@/components/ui/button';
 import axios from 'axios';
+import { useRouter } from 'next/navigation';
+
+
+
 
 const CheckoutPage = () => {
   const cart = useSelector((state) => state.cart);
@@ -32,7 +36,7 @@ const CheckoutPage = () => {
 
   function onSubmit(cart) {
     console.log("XXX Submitting orderNumber:", orderNumber); // Inside onSubmit, before axios call
-
+    
     axios({
       method: "post",
       url: "http://44.239.43.181:8080/LiftAndShift/post",
@@ -43,10 +47,9 @@ const CheckoutPage = () => {
       headers: { "Content-Type": "application/json" },
     }).then((response) => {
       dispatch(clearCart());
-      //generateOrderNumber(); // Generate a new order number for future submissions
-    }).catch((error) => {
-      console.error("Error submitting cart: ", error);
-    });
+    }).then((responnse) => {
+      router.push('/')
+    })
   }
 
   const getTotalPrice = () => {
@@ -54,7 +57,7 @@ const CheckoutPage = () => {
       (accumulator, item) => accumulator + item.quantity * item.price, 0
     );
   };
-
+  const router = useRouter()
   return (
     <div className={styles.container}>
       {cart.length === 0 ? (

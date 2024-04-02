@@ -20,10 +20,11 @@ import { useRouter } from "next/navigation"
 
 
 const formSchema = z.object({
-  firstname: z.string().min(2).max(50),
-  lastname: z.string().min(2).max(50),
+  firstname: z.string().max(50).optional(),
+  lastname: z.string().max(50).optional(),
+  companyName:z.string().max(50).optional(),
   email: z.string().min(2).max(50),
-  phone: z.string().min(2).max(50),
+  phone: z.string().max(50).optional(),
   street1: z.string().min(2).max(50),
   street2: z.string().min(0).max(50).optional(),
   city: z.string().min(2).max(50),
@@ -40,6 +41,7 @@ export default function ShippingForm() {
       defaultValues: {
         firstname: "",
         lastname: "",
+        companyName:"",
         email: "",
         phone: "",
         street1: "",
@@ -56,6 +58,7 @@ export default function ShippingForm() {
     
     formData.append("firstname", values.firstname);
     formData.append("lastname", values.lastname);
+    formData.append("companyName", values.companyName);
     formData.append("email", values.email);
     formData.append("phone", values.phone);
     formData.append("street1", values.street1);
@@ -95,6 +98,19 @@ export default function ShippingForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Last Name</FormLabel>
+              <FormControl>
+                <Input placeholder="" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+          />
+           <FormField
+          control={form.control}
+          name="companyName"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Company Name</FormLabel>
               <FormControl>
                 <Input placeholder="" {...field} />
               </FormControl>
