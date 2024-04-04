@@ -55,17 +55,16 @@ export default function ShippingForm() {
     // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
     var formData = new FormData();
-    
-    formData.append("firstname", values.firstname);
-    formData.append("lastname", values.lastname);
-    formData.append("companyName", values.companyName);
+    formData.append("firstname", String(values.firstname));
+    formData.append("lastname", String(values.lastname));
+    formData.append("companyName", String(values.companyName));
     formData.append("email", values.email);
-    formData.append("phone", values.phone);
-    formData.append("street1", values.street1);
-    formData.append("street2", values.street2);
-    formData.append("city", values.city);
-    formData.append("state", values.state);
-    formData.append("zip", values.zip); 
+    formData.append("phone", String(values.phone));
+    formData.append("street1", String(values.street1));
+    formData.append("street2", String(values.street2));
+    formData.append("city", String(values.city));
+    formData.append("state",String(values.state));
+    formData.append("zip", String(values.zip)); 
     axios({
       method: "post",
       url: "http://44.239.43.181:8080/LiftAndShift/post",

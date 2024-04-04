@@ -35,8 +35,8 @@ export default function ContactUs() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     var formData = new FormData();
-    formData.append("useremail", values.useremail); 
-    formData.append("userFeedback", values.userFeedback);
+    formData.append("useremail", String(values.useremail)); 
+    formData.append("userFeedback", String(values.userFeedback));
     axios({
       method: "post",
       url: "http://44.239.43.181:8080/LiftAndShift/sendemail",

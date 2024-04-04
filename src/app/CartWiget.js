@@ -1,8 +1,7 @@
 'use client'
 import React from 'react';
-import { Provider, useSelector } from 'react-redux';
+import {useSelector } from 'react-redux';
 import Link from 'next/link';
-import store from '../../redux/store'; // Import your Redux store here
 import Image from 'next/image';
 
 const CartWidget = () => {
