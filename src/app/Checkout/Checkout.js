@@ -65,7 +65,7 @@ const CheckoutPage = () => {
     return totalPriceWithTax;
 };
 
-const taxRate = getGeoState() === 'TX' ? 0.08 : 0;
+const taxRate = getGeoState() === 'TX' ? 0.0815 : 0;
 console.log('Tax Rate:', taxRate);
 const totalPrice = getTotalPrice(taxRate);
 console.log("Total Price with Tax: ", totalPrice);
@@ -97,7 +97,8 @@ console.log("Total Price with Tax: ", totalPrice);
               <p>$ {item.quantity * item.price}</p>
             </div>
           ))}
-          <div>Your Total Price With Tax {totalPrice.toFixed(2)}</div>
+          <div>
+            Your total Price With Tax {totalPrice.toFixed(2)}</div>
           <div className='text-lg font-extrabold text-white'>Please call 1-800-325-8488 to make payment</div>
           <Button onClick={() => onSubmit(cart)}>Click to confirm order number {orderNumber} with a Grand Total $ {totalPrice}</Button>
         </>

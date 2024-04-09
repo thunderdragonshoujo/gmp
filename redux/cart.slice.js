@@ -43,5 +43,4 @@ export const {
   decrementQuantity,
   removeFromCart,
   clearCart,
-  addFormData,
 } = cartSlice.actions;
