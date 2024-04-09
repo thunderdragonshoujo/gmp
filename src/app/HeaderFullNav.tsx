@@ -5,11 +5,15 @@ import Image from 'next/image';
 import CartWidget from './CartWiget';
 import { Provider } from 'react-redux';
 import store from '../../redux/store';
+import { useMediaQuery } from '@/hooks/use-media-query';
+import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
+import { MenuIcon } from 'lucide-react';
 
 
 
 function Header() {
-    return (
+  const isDesktop = useMediaQuery("(min-width: 768px)") 
+    return isDesktop ?( 
       <Provider store={store}>
         <div>
           <nav className="flex justify-inbetween space-x-4 items-center mx-auto bg-black text-white">
@@ -63,10 +67,49 @@ function Header() {
                 </nav>
                 </div>
                 </Provider>
-                
-               
-        
     )
-}
+    : 
+    <Provider store={store}>
+    <div className='flex justify-between'>
+      <Drawer direction='right'>
+        <DrawerTrigger>
+          <MenuIcon/>
+        </DrawerTrigger>
+        <DrawerContent>
 
+<Link href="/Magnetrons">
+      <div>
+        <button>Magnetrons</button>
+      </div>
+    </Link>
+    
+    <Link href="/Switches">
+      <div>
+        <button>Switches</button>
+      </div>
+    </Link>
+    
+    <Link href="/Capacitors">
+      <div>
+        <button>Capacitors</button>
+      </div>
+    </Link>
+    
+    <Link href="/Diodes">
+      <div>
+        <button>Diodes</button>
+      </div>
+    </Link>
+    
+    <Link href="/Fuses">
+      <div>
+        <button>Fuses</button>
+      </div>
+    </Link>
+        </DrawerContent>
+      </Drawer>
+      <CartWidget/>
+      </div>
+      </Provider>
+  }
 export default Header

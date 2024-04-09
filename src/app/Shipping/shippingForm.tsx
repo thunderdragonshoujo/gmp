@@ -17,6 +17,8 @@ import {
 import { Input } from "@/components/ui/input"
 import axios from "axios"
 import { useRouter } from "next/navigation"
+import { useDispatch} from "react-redux"
+import globalUserStateObject from '../../../redux/globalUserStateObject';
 
 
 const formSchema = z.object({
@@ -34,6 +36,7 @@ const formSchema = z.object({
 
 export default function ShippingForm() {
   const router = useRouter()
+  const dispatch = useDispatch();
   
     // 1. Define your form.
     const form = useForm<z.infer<typeof formSchema>>({
@@ -70,10 +73,13 @@ export default function ShippingForm() {
       url: "http://44.239.43.181:8080/LiftAndShift/post",
       data: formData,
       headers: { "Content-Type": "application/json" },
-    })
+    }).then
     router.push('/Checkout')
-    console.log(values)
+    globalUserStateObject.geoState = values.state;
+    console.log(globalUserStateObject.geoState)
   }
+
+  
 
   return (
     <Form {...form}>

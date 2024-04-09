@@ -31,7 +31,7 @@ const cartSlice = createSlice({
     },
     clearCart:(state,action) =>{
       return []
-    }
+    },
   },
 });
 
@@ -43,4 +43,5 @@ export const {
   decrementQuantity,
   removeFromCart,
   clearCart,
+  addFormData,
 } = cartSlice.actions;
