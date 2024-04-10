@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { toast } from "@/components/ui/use-toast"
 
 const formSchema = z.object({
   useremail: z.string().email().min(2, {
@@ -39,7 +40,7 @@ export default function ContactUs() {
     formData.append("userFeedback", String(values.userFeedback));
     axios({
       method: "post",
-      url: "http://44.239.43.181:8080/LiftAndShift/sendemail",
+      url: "http://44.239.43.181:8080/LiftAndShift/post?sendemail",
       data: formData,
       headers: { "Content-Type": "application/json" },
     }).then(function (response) {
@@ -51,6 +52,10 @@ export default function ContactUs() {
       console.log(response);
     });
     console.log(values)
+    toast({
+      title: "Thanks Your Feedack was welcome",
+      description: "",
+    })
   }
 
   return (
