@@ -100,7 +100,7 @@ console.log("Total Price with Tax: ", totalPrice);
           <div>
             Your total Price With Tax {totalPrice.toFixed(2)}</div>
           <div className='text-lg font-extrabold text-white'>Please call 1-800-325-8488 to make payment</div>
-          <Button onClick={() => onSubmit(cart)}>Click to confirm order number {orderNumber} with a Grand Total $ {totalPrice}</Button>
+          <Button onClick={() => onSubmit(cart)}>Submit your Order</Button>
         </>
       )}
     </div>

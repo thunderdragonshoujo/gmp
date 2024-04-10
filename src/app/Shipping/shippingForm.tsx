@@ -83,7 +83,7 @@ export default function ShippingForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="container justify-items-center w-1/2 font-bold">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="mx-auto justify-items-center w-1/2 font-bold lg:w-1/3">
         <FormField
           control={form.control}
           name="firstname"
