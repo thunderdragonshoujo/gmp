@@ -16,7 +16,7 @@ function Header() {
     return isDesktop ?( 
       <Provider store={store}>
         <div>
-          <nav className="flex justify-inbetween space-x-4 items-center mx-auto bg-black text-white">
+          <nav className="flex object-top justify-center space-x-4 items-center mx-auto bg-black text-white">
             <div>
             <Link href="/">
             <Image src='/5-1-globe.png' 
