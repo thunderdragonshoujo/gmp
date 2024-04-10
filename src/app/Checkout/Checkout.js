@@ -13,6 +13,8 @@ import { Button } from '@/components/ui/button';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import globalUserStateObject from '../../../redux/globalUserStateObject';
+import { useToast } from "@/components/ui/use-toast"
+
 
 const getGeoState = () => {
 let geoState = globalUserStateObject.geoState
@@ -23,7 +25,8 @@ const CheckoutPage = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const [orderNumber, setOrderNumber] = useState('');
-  
+  const { toast } = useToast()
+
   
 
   // Function to generate and set a new order number
@@ -40,7 +43,17 @@ const CheckoutPage = () => {
     generateOrderNumber();
   }, []);
 
+  function showSuccess() {
+    toast({
+      title: "Scheduled: Catch up",
+      description: "Friday, February 10, 2023 at 5:57 PM",
+    })
+  }
+  
+    
+
   function onSubmit(cart) {
+    
     console.log("XXX Submitting orderNumber:", orderNumber); // Inside onSubmit, before axios call
     
     axios({
@@ -53,8 +66,11 @@ const CheckoutPage = () => {
       headers: { "Content-Type": "application/json" },
     }).then((response) => {
       dispatch(clearCart());
-    }).then((responnse) => {
       router.push('/')
+    })
+    toast({
+      title: "Thanks Your Order was accepted",
+      description: "",
     })
   }
 
@@ -100,7 +116,8 @@ console.log("Total Price with Tax: ", totalPrice);
           <div>
             Your total Price With Tax {totalPrice.toFixed(2)}</div>
           <div className='text-lg font-extrabold text-white'>Please call 1-800-325-8488 to make payment</div>
-          <Button onClick={() => onSubmit(cart)}>Submit your Order</Button>
+          <Button onClick={() => onSubmit()}>Subimt your order</Button>
+          
         </>
       )}
     </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "./Footer";
 import Header from "./HeaderFullNav";
+import { Toaster } from "@/components/ui/toaster"
 
 
 
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className='bg-gradient-to-r from-cyan-500 to-blue-500'>
       <Header/>
       {children}
+      <Toaster />
       <Footer/>
       </body>
     </html>
