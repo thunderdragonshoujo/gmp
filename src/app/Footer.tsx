@@ -10,7 +10,7 @@ function Footer() {
 		<Link href={"/Copyright"}>Copyright</Link>
 		<Link href={"/AboutUs"}>About Us</Link>
 		<Link href={"/ContactUs"}>Contact Us</Link>
-		<Link href={"/site-map"}>Site Map</Link>
+		<Link href={"/SiteMap"}>Site Map</Link>
 	</div>
     );
 }
