@@ -14,6 +14,15 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import globalUserStateObject from '../../../redux/globalUserStateObject';
 import { useToast } from "@/components/ui/use-toast"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
 
 
 const getGeoState = () => {
@@ -81,11 +90,12 @@ const CheckoutPage = () => {
     return totalPriceWithTax;
 };
 
+const Subtotal = cart.reduce((accumulator, item) => accumulator + (Number(item.quantity) * Number(item.price)), 0);
 const taxRate = getGeoState() === 'TX' ? 0.0815 : 0;
 console.log('Tax Rate:', taxRate);
 const totalPrice = getTotalPrice(taxRate);
 console.log("Total Price with Tax: ", totalPrice);
-
+const taxAmount = Subtotal * taxRate;
 
   const router = useRouter()
   return (
@@ -113,10 +123,25 @@ console.log("Total Price with Tax: ", totalPrice);
               <p>$ {item.quantity * item.price}</p>
             </div>
           ))}
-          <div>
-            Your total Price With Tax {totalPrice.toFixed(2)}</div>
-          <div className='text-lg font-extrabold text-white'>Please call 1-800-325-8488 to make payment</div>
+          <div className='w-1/2 mx-auto my-10'>
+          <Card className='max-w-sm rounded-lg overflow-hidden shadow-md hover:shadow-lg'>
+           <CardHeader>
+          <CardTitle>Checkout</CardTitle>
+          <CardDescription className='text-black text-balance text-lg font-extrabold'><span> Please call 1-800-325-8488 to make payment</span></CardDescription>
+          </CardHeader>
+          <CardContent className='grid col-span-1 justify-center items-center'>
+          <div>Subtotal - {Subtotal.toFixed(2)}</div>
+          <div>Tax - {taxAmount.toFixed(2)}</div>
+          <div>_______________________________</div>
+          <div>your total with tax - {totalPrice.toFixed(2)}</div>
+          </CardContent>
+          <CardFooter className='flex justify-center'>
           <Button onClick={() => onSubmit()}>Subimt your order</Button>
+          </CardFooter>
+          </Card>
+          </div>
+          
+          
           
         </>
       )}
