@@ -52,26 +52,26 @@ const CheckoutPage = () => {
   
     
 
-  function onSubmit(cart) {
+  function onSubmit() {
     
     console.log("XXX Submitting orderNumber:", orderNumber); // Inside onSubmit, before axios call
-    
+    toast({
+      title: "Thanks Your Order was accepted",
+      description: "",
+    })
     axios({
       method: "post",
       url: "http://44.239.43.181:8080/LiftAndShift/post",
       data: {
         orderNo: orderNumber, // Use stateful order number
-        cart: cart,
+        cart: cart
       },
       headers: { "Content-Type": "application/json" },
     }).then((response) => {
       dispatch(clearCart());
       router.push('/')
     })
-    toast({
-      title: "Thanks Your Order was accepted",
-      description: "",
-    })
+    
   }
 
   const getTotalPrice = (taxRate) => {
