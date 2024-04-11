@@ -6,7 +6,6 @@ import InfoHeader from './InfoHeader'
 const page = () => {
   return (
     <>
-    <InfoHeader/>
     <ShadCaro/>
     </>
   )

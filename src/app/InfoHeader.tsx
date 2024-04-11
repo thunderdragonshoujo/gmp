@@ -3,7 +3,7 @@ import React from 'react'
 
 const InfoHeader = () => {
   return (
-    <div className='flex-shrink text-wrap gap-8 columns-3 bg-black text-white'>
+    <div className='flex gap-8 columns-3 bg-black text-white font-extrabold'>
         <div>
             <h1 >Global Microwave Parts</h1>
             <i className='text-[11px]'>Call to setup a Wholesale Account</i>

@@ -6,8 +6,11 @@ import CartWidget from './CartWiget';
 import { Provider } from 'react-redux';
 import store from '../../redux/store';
 import { useMediaQuery } from '@/hooks/use-media-query';
-import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
-import { MenuIcon } from 'lucide-react';
+import { Button, buttonVariants } from "@/components/ui/button"
+
+
+
+
 
 
 
@@ -16,7 +19,7 @@ function Header() {
     return isDesktop ?( 
       <Provider store={store}>
         <div>
-          <nav className="flex object-top justify-center space-x-4 items-center mx-auto bg-black text-white">
+          <nav className="flex object-top justify-start space-x-4 items-center mx-auto bg-black text-white">
             <div>
             <Link href="/">
             <Image src='/5-1-globe.png' 
@@ -65,51 +68,71 @@ function Header() {
             
             </div>
                 </nav>
+                <div className='flex gap-8 columns-3 bg-black text-white font-extrabold'>
+        <div>
+            <h1 >Global Microwave Parts</h1>
+            <i className='text-[11px]'>Call to setup a Wholesale Account</i>
+            </div>
+        <div>
+        <p>(P) 800-325-8488</p>
+        <p>(F) 800-433-2060</p>
+        </div>
+        <div className='hidden lg:block'>
+            <p>9894 Monroe Dr Dallas, TX 75220</p><Link href={'/ContactUs'}>order@globalmicrowaveparts.com</Link>
+        </div>
+    </div>
                 </div>
                 </Provider>
     )
-    : 
+    :
     <Provider store={store}>
-    <div className='flex justify-between'>
-      <Drawer direction='right'>
-        <DrawerTrigger>
-          <MenuIcon/>
-        </DrawerTrigger>
-        <DrawerContent>
+      <div className='sticky top-0 z-50'>
+      <div className='flex gap-8 columns-3 bg-black text-white font-extrabold'>
+        <div>
+            <h1 >Global Microwave Parts</h1>
+            <i className='text-[11px]'>Call to setup a Wholesale Account</i>
+            </div>
+        <div>
+        <p>(P) 800-325-8488</p>
+        <p>(F) 800-433-2060</p>
+        </div>
+        <div className='hidden lg:block'>
+            <p>9894 Monroe Dr Dallas, TX 75220</p><Link href={'/ContactUs'}>order@globalmicrowaveparts.com</Link>
+        </div>
+    </div>
+        <nav className='bg-black text-white'>
+          <ul className='columns-2'>
+          
+            <Link href="/Magnetrons">Magnitrons</Link>
+                <Link href="/Switches">
+                  <div>
+                    <button>Switches</button>
+                  </div>
+                </Link>
+                
+                <Link href="/Capacitors">
+                  <div>
+                    <button>Capacitors</button>
+                  </div>
+                </Link>
+                
+                <Link href="/Diodes">
+                  <div>
+                    <button>Diodes</button>
+                  </div>
+                </Link>
+                
+                <Link href="/Fuses">
+                  <div>
+                    <button>Fuses</button>
+                  </div>
+                </Link>
+                <CartWidget/>
+          </ul>
+        </nav>
+      </div>
 
-<Link href="/Magnetrons">
-      <div>
-        <button>Magnetrons</button>
-      </div>
-    </Link>
-    
-    <Link href="/Switches">
-      <div>
-        <button>Switches</button>
-      </div>
-    </Link>
-    
-    <Link href="/Capacitors">
-      <div>
-        <button>Capacitors</button>
-      </div>
-    </Link>
-    
-    <Link href="/Diodes">
-      <div>
-        <button>Diodes</button>
-      </div>
-    </Link>
-    
-    <Link href="/Fuses">
-      <div>
-        <button>Fuses</button>
-      </div>
-    </Link>
-        </DrawerContent>
-      </Drawer>
-      <CartWidget/>
-      </div>
-      </Provider>
-  }
+</Provider>
+}
+
 export default Header
