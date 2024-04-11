@@ -115,7 +115,7 @@ const taxAmount = Subtotal * taxRate;
           {cart.map((item) => (
             <div key={item.id} className={styles.body}>
               <div className={styles.image}>
-                <Image src={item.imgSrc} alt={item.imgAlt} height="60" width="45" />
+                <Image src={item.imgSrc} alt={item.imgAlt} height="100" width="100" />
               </div>
               <p>{item.product}</p>
               <p>$ {item.price}</p>
@@ -127,13 +127,13 @@ const taxAmount = Subtotal * taxRate;
           <Card className='max-w-sm rounded-lg overflow-hidden shadow-md hover:shadow-lg'>
            <CardHeader>
           <CardTitle>Checkout</CardTitle>
-          <CardDescription className='text-black text-balance text-lg font-extrabold'><span> Please call 1-800-325-8488 to make payment</span></CardDescription>
+          <CardDescription className='text-black text-balance text-lg font-extrabold'>Please call 1-800-325-8488 to make payment</CardDescription>
           </CardHeader>
           <CardContent className='grid col-span-1 justify-center items-center'>
           <div>Subtotal - {Subtotal.toFixed(2)}</div>
           <div>Tax - {taxAmount.toFixed(2)}</div>
           <div>_______________________________</div>
-          <div>your total with tax - {totalPrice.toFixed(2)}</div>
+          <div>total with tax - {totalPrice.toFixed(2)}</div>
           </CardContent>
           <CardFooter className='flex justify-center'>
           <Button onClick={() => onSubmit()}>Subimt your order</Button>
