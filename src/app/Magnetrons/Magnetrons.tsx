@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { addToCart } from '../../../redux/cart.slice';
 import { useDispatch } from 'react-redux';
+import Image from "next/image";
 
 const products = [
   {
@@ -256,7 +257,9 @@ export default function Magnetron() {
             {products.map((product) => (
               <a key={product.id}  className="group">
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                  <img
+                  <Image
+                    height='600'
+                    width= '500'
                     src={product.imgSrc}
                     alt={product.imgAlt}
                     className="h-full w-full object-cover object-center group-hover:opacity-75"
