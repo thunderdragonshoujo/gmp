@@ -1,97 +1,98 @@
 import { Button } from "@/components/ui/button";
 import { addToCart } from '../../../redux/cart.slice';
 import { useDispatch } from 'react-redux';
+import Image from 'next/image'
 
 const products = [
   {
     id: "GLC_HD30",
     partType: "Fuses",
     product: "GLC_HD30",
-    price: "4.90",
+    price: 4.90,
     imgSrc: "/GLC_HD30.JPG",
     imgAlt: "/GLC_HD30.JPG",
-    desc:"A basic part with great qualities a good value."
+    desc:"220 VAC"
   },
   {
     id: "GLC_FNMH",
     partType:"Fuses",
     product:"GLC_FNMH",
-    price:"11.95",
+    price:11.95,
     imgSrc:"/GLC_FNMH.JPG",
     imgAlt:"/GLC_FNMH.JPG",
-    desc:"A basic part with great qualities a good value."
+    desc:"220 VAC"
   },
   {
     id: "GLC_FNM-20",
     partType: "Fuses",
     product: "GLC_FNM-20",
-    price: "4.25",
+    price: 4.25,
     imgSrc: "/GLC_FNM-20.JPG",
     imgAlt: "/GLC_FNM-20.JPG",
-    desc:"A basic part with great qualities a good value."
+    desc:"220 VAC"
   },
   {
     id: "GLC_FNM-25",
     partType:"Fuses",
     product:"GLC_FMN-25",
-    price: "4.25",
+    price: 4.25,
     imgSrc:"/GLC_FNM-25.JPG",
     imgAlt:"/GLC_FNM-25.JPG",
-    desc:"A basic part with great qualities a good value."
+    desc:"220 VAC"
   },
   {
     id: "GLC_FNM-30",
     partType: "Fuses",
     product: "GLC_FNM-30",
-    price: "4.25",
+    price: 4.25,
     imgSrc: "/GLC_FNM-30.JPG",
     imgAlt: "/GLC_FNM-30.JPG",
-    desc:"A basic part with great qualities a good value."
+    desc:"220 VAC"
   },
   {
     id: "GLC_4-10",
     partType:"Fuses",
     product:"GLC_4-10",
-    price: "2.50",
+    price: 2.50,
     imgSrc:"/GLC_4-10.JPG",
     imgAlt:"/GLC_4-10.JPG",
-    desc:"A basic part with great qualities a good value."
+    desc:"220 VAC"
   },
   {
     id: "GLC_4-12",
     partType: "Fuses",
     product: "GLC_4-12",
-    price: "2.50",
+    price: 2.50,
     imgSrc: "/GLC_4-12.JPG",
     imgAlt: "/GLC_4-12.JPG",
-    desc:"A basic part with great qualities a good value."
+    desc:"220 VAC"
   },
   {
     id: "GLC_4-15",
     partType:"Fuses",
     product:"GLC_4-15",
-    price: "2.50",
+    price: 2.50,
     imgSrc:"/GLC_4-15.JPG",
     imgAlt:"/GLC_4-15.JPG",
-    desc:"A basic part with great qualities a good value."
+    desc:"220 VAC"
   },
   {
     id: "GLC_4-20",
     partType: "Fuses",
     product: "GLC_4-20",
-    price: "2.50",
+    price: 2.50,
     imgSrc: "/GLC_4-20.JPG",
     imgAlt: "/GLC_4-20.JPG",
-    desc:"A basic part with great qualities a good value."
+    desc:"220 VAC"
   },
   {
     id: "GLC_4-25",
     partType:"Fuses",
     product:"GLC_4-25",
-    price: "2.50",
+    price: 2.50,
     imgSrc:"/GLC_4-25.JPG",
     imgAlt:"/GLC_4-25.JPG",
-    desc:"A basic part with great qualities a good value."
+    desc:"220 VAC"
   }
 ];
 
@@ -106,14 +107,16 @@ export default function Fuses() {
             {products.map((product) => (
               <a key={product.id} className="group">
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                  <img
+                  <Image
                     src={product.imgSrc}
                     alt={product.imgAlt}
+		    height='500'
+		    width='500'
                     className="h-full w-full object-cover object-center group-hover:opacity-75"
                   />
                 </div>
                 <h3 className="mt-4 text-sm text-gray-700">{product.product}</h3>
-                <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
+                <p className="mt-1 text-lg font-medium text-gray-900">{(product.price).toFixed(2)}</p>
                 <Button onClick={() => dispatch(addToCart(product))}>add to cart</Button>
               </a>
             ))}

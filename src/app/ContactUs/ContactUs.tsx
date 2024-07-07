@@ -1,5 +1,7 @@
 'use client'
 import { zodResolver } from "@hookform/resolvers/zod"
+import { useToast } from "@/components/ui/use-toast"
+import { useRouter } from 'next/navigation'
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import axios from 'axios'
@@ -15,32 +17,36 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { toast } from "@/components/ui/use-toast"
+
 
 const formSchema = z.object({
   useremail: z.string().email().min(2, {
     message: "Username must be at least 2 characters.",
   }).max(50),
-  userFeedback: z.string().max(4000).optional()
+  msg: z.string().max(4000).optional()
 })
 
 export default function ContactUs() {
+
+  const { toast } = useToast()
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       useremail: "",
-      userFeedback:"",
+      msg:"",
     },
   })
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     var formData = new FormData();
     formData.append("useremail", String(values.useremail)); 
-    formData.append("userFeedback", String(values.userFeedback));
+    //values.useremail = ""
+    formData.append("msg", String(values.msg));
+    //values.msg = ""
     axios({
       method: "post",
-      url: "http://44.239.43.181:8080/LiftAndShift/post?sendemail",
+      url: "http://44.239.43.181:8083/LiftAndShift/post",
       data: formData,
       headers: { "Content-Type": "application/json" },
     }).then(function (response) {
@@ -53,11 +59,13 @@ export default function ContactUs() {
     });
     console.log(values)
     toast({
-      title: "Thanks Your Feedack was welcome",
-      description: "",
+      title: "Thanks for your email!",
+      description: "We will review it soon.",
     })
+    router.push('/')
   }
 
+  const router = useRouter()
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -79,7 +87,7 @@ export default function ContactUs() {
         />
         <FormField
           control={form.control}
-          name="userFeedback"
+          name="msg"
           render={({ field }) => (
             <FormItem>
               <FormLabel>User Feedback</FormLabel>
@@ -99,3 +107,4 @@ export default function ContactUs() {
     </Form>
   )
 }
+

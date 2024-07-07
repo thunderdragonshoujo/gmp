@@ -76,12 +76,18 @@ export default function ShippingForm() {
     }).then
     router.push('/Checkout')
     globalUserStateObject.geoState = values.state;
+    globalUserStateObject.email= values.email;
     console.log(globalUserStateObject.geoState)
+    console.log(globalUserStateObject.email)
   }
 
   
 
   return (
+    <div className='ShippingAddress' style={{ textAlign: 'center' }}>
+      <div>
+        <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>Shipping Address</h1>
+      </div>
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="mx-auto justify-items-center w-1/2 font-bold lg:w-1/3">
         <FormField
@@ -167,7 +173,7 @@ export default function ShippingForm() {
           name="street2"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>street2</FormLabel>
+              <FormLabel>Street2</FormLabel>
               <FormControl>
                 <Input placeholder="" {...field} />
               </FormControl>
@@ -206,7 +212,7 @@ export default function ShippingForm() {
           name="zip"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Zip</FormLabel>
+              <FormLabel>ZipCode</FormLabel>
               <FormControl>
                 <Input placeholder="" {...field} />
               </FormControl>
@@ -214,8 +220,9 @@ export default function ShippingForm() {
             </FormItem>
           )}
           />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Submit Your Shipping Info</Button>
       </form>
     </Form>
+    </div>
   )
 }

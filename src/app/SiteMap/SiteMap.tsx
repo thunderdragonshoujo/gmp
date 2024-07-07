@@ -4,9 +4,24 @@ import React from 'react'
 const SiteMap = () => {
   return (
     <div className=''>
-        <ul className=''>
-         <div>
-        <Link href={"/"}>Home</Link>
+        <ul className='ml-2'>
+        <div>
+                <Link href={"/"}>Home</Link>
+        </div>
+        <div>
+		<Link href={"/Magnetrons"}>Magnetrons</Link>
+        </div>
+        <div>
+		<Link href={"/Capacitors"}>Capacitors</Link>
+        </div>
+        <div>
+		<Link href={"/Switches"}>Switches</Link>
+        </div>
+        <div>
+		<Link href={"/Diodes"}>Diodes</Link>
+        </div>
+        <div>
+		<Link href={"/Fuses"}>Fuses</Link>
         </div>
         <div>
 		<Link href={"/PrivacyPolicy"}>Privacy Policy</Link>
@@ -19,9 +34,6 @@ const SiteMap = () => {
         </div>
 		<div>
         <Link href={"/ContactUs"}>Contact Us</Link>
-        </div>
-		<div>
-        <Link href={"/SiteMap"}>Site Map</Link>
         </div>
         </ul>
     </div>

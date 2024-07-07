@@ -1,4 +1,5 @@
 const globalUserStateObject = {
-	geoState : "CA"
+	geoState : "CA",
+	email : ""
 }
 export default globalUserStateObject

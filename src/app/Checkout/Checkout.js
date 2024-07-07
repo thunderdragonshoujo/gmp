@@ -91,7 +91,7 @@ const CheckoutPage = () => {
 };
 
 const Subtotal = cart.reduce((accumulator, item) => accumulator + (Number(item.quantity) * Number(item.price)), 0);
-const taxRate = getGeoState() === 'TX' ? 0.0815 : 0;
+const taxRate = getGeoState().toUpperCase() === 'TX' ? 0.0825 : 0;
 console.log('Tax Rate:', taxRate);
 const totalPrice = getTotalPrice(taxRate);
 console.log("Total Price with Tax: ", totalPrice);
@@ -118,9 +118,9 @@ const taxAmount = Subtotal * taxRate;
                 <Image src={item.imgSrc} alt={item.imgAlt} height="100" width="100" />
               </div>
               <p>{item.product}</p>
-              <p>$ {item.price}</p>
+              <p>$ {item.price.toFixed(2)}</p>
               <p>{item.quantity}</p>
-              <p>$ {item.quantity * item.price}</p>
+              <p>$ {(item.quantity * item.price).toFixed(2)}</p>
             </div>
           ))}
           <div className='w-1/2 mx-auto my-10'>
@@ -136,7 +136,7 @@ const taxAmount = Subtotal * taxRate;
           <div>total with tax - {totalPrice.toFixed(2)}</div>
           </CardContent>
           <CardFooter className='flex justify-center'>
-          <Button onClick={() => onSubmit()}>Subimt your order</Button>
+          <Button onClick={() => onSubmit()}>Submit Your Order</Button>
           </CardFooter>
           </Card>
           </div>

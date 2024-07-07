@@ -58,6 +58,13 @@ function Header() {
                     <button>Fuses</button>
                   </div>
                 </Link>
+
+                <Link href="/Tstats">
+                  <div>
+                    <button>TStats</button>
+                  </div>
+                </Link>
+
                 <CartWidget/>
                 <div className='justify-end'>
             
@@ -103,7 +110,7 @@ function Header() {
         <nav className='bg-black text-white'>
           <ul className='columns-2'>
           
-            <Link href="/Magnetrons">Magnitrons</Link>
+            <Link href="/Magnetrons">Magnetrons</Link>
                 <Link href="/Switches">
                   <div>
                     <button>Switches</button>
@@ -127,6 +134,13 @@ function Header() {
                     <button>Fuses</button>
                   </div>
                 </Link>
+
+                <Link href="/Tstats">
+                  <div>
+                    <button>TStats</button>
+                  </div>
+                </Link>
+
                 <CartWidget/>
           </ul>
         </nav>

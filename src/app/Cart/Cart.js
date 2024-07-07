@@ -48,7 +48,7 @@ const CartPage = () => {
                 <Image src={item.imgSrc} alt={item.imgAlt} height="90" width="65" />
               </div>
               <p>{item.product}</p>
-              <p>$ {item.price}</p>
+              <p>$ {item.price.toFixed(2)}</p>
               <p>{item.quantity}</p>
               <div className={styles.buttons}>
                 <button onClick={() => dispatch(incrementQuantity(item.id))}>
@@ -64,7 +64,7 @@ const CartPage = () => {
               <p>${(item.quantity * item.price).toFixed(2)}</p>
             </div>
           ))}
-<Link className={buttonVariants({ variant: "outline" })}href='/Shipping'>Checkout Grand Total: $ {getTotalPrice()}</Link>
+<Link className={buttonVariants({ variant: "outline" })}href='/Shipping'>Cart Subtotal: $ {getTotalPrice()}</Link>
         </>
       )}
     </div>

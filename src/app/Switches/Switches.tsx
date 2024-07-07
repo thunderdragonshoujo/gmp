@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { addToCart } from '../../../redux/cart.slice';
 import { useDispatch } from 'react-redux';
+import Image from 'next/image';
 
 
 const products = [
@@ -9,7 +10,7 @@ const products = [
     id:"GMP-GLC_14-104_1_4",
     partType:"Switch",
     product:"GLC_14-104 1_4",
-    price:"10.95",
+    price:10.95,
     imgSrc:"/GLC_14-104_1_4.JPG",
     imgAlt:"/GLC_14-104_1_4.JPG",
     desc:"16 Amps"
@@ -18,7 +19,7 @@ const products = [
     id: "GLC_14-104_3_16",
     partType: "Switch",
     product: "GLC_14-104_3_16",
-    price: "9.95",
+    price: 9.95,
     imgSrc: "/GLC_14-104_3_16.JPG",
     imgAlt: "/GLC_14-104_3_16.JPG",
     desc:"16 Amps"
@@ -27,7 +28,7 @@ const products = [
     id:"GMP-GLC_14-22A",
     partType:"Switch",
     product:"GMP-GLC_14-22A",
-    price:"10.95",
+    price:10.95,
     imgSrc:"/GLC_14-22A.JPG",
     imgAlt:"/GLC_14-22A.JPG",
     desc:"22 Amps"
@@ -36,7 +37,7 @@ const products = [
     id: "GLC_22A316ZE",
     partType: "Switch",
     product: "GLC_22A316ZE",
-    price: "10.95",
+    price: 10.95,
     imgSrc: "/22A316ZE.JPG",
     imgAlt: "/22A316ZE.JPG",
     desc:"22 Amps"
@@ -54,14 +55,16 @@ export default function Switches() {
             {products.map((product) => (
               <a key={product.id}  className="group">
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                  <img
+                  <Image
                     src={product.imgSrc}
                     alt={product.imgAlt}
+		    height='500'
+		    width='500'
                     className="h-full w-full object-cover object-center group-hover:opacity-75"
                   />
                 </div>
                 <h3 className="mt-4 text-sm text-gray-700">{product.product}</h3>
-                <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
+                <p className="mt-1 text-lg font-medium text-gray-900">{(product.price).toFixed(2)}</p>
                 <p className="mt-1 text-lg font-medium text-gray-900">{product.desc}</p>
                 <Button onClick={() => dispatch(addToCart(product))}>add to cart</Button>
               </a>

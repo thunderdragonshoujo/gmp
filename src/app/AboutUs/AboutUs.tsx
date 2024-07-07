@@ -4,8 +4,8 @@ import { Card } from '@/components/ui/card'
 
 const AboutUs = () => {
   return (
-	<div className=''>
-<Card className='flex justify-center'>
+	<div className='flex justify-center'>
+<Card className='flex justify-center w-1/3'>
   <div>
   <Image 
   src="/map-img.png"
