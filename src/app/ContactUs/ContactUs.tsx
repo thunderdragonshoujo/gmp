@@ -40,7 +40,7 @@ export default function ContactUs() {
     formData.append("userFeedback", String(values.userFeedback));
     axios({
       method: "post",
-      url: "http://44.239.43.181:8080/LiftAndShift/post",
+      url: "http://44.239.43.181:8083/LiftAndShift/post",
       data: formData,
       headers: { "Content-Type": "application/json" },
     }).then(function (response) {
