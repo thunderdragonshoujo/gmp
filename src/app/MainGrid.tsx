@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './MainFlex.css';
 import Image from "next/image";
 
-function getRandInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
+function getRandInt(max: number): number {
+    return Math.floor(Math.random() * Math.floor(max));
 }
 
 const MainGrid = () => {
