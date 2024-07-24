@@ -58,7 +58,7 @@ const MainGrid = () => {
                 alt={`tile-${index}`}
                 fill
                 style={{ objectFit: "cover" }}
-                onError={(e) => { e.target.src = "/tile-mags.jpg"; }}
+                onError={(e) => { (e.target as HTMLImageElement).src = "tile-mags.jpg"; }}
               />
             </div>
           </li>
