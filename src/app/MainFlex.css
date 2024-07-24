@@ -1,0 +1,33 @@
+/* MainFlex.css */
+.main-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 5px;
+}
+
+.main-grid li {
+  list-style: none;
+  position: relative;
+  flex: 0 0 calc(100% / 6 - 10px); /* Fixed width for 6 items per row, minus gap */
+  height: calc((100vh - 60px) / 6); /* Fixed height for 6 items per column */
+}
+
+.image-container {
+  position: centered;
+  width: 80%;
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .main-grid li {
+    flex: 0 0 calc(100% / 4 - 10px); /* Adjust for 4 items per row on medium screens */
+  }
+}
+
+@media (max-width: 800px) {
+  .main-grid li {
+    flex: 0 0 calc(100% / 2 - 10px); /* Adjust for 2 items per row on small screens */
+  }
+}
+
