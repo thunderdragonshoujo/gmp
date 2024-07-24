@@ -9,7 +9,7 @@
 .main-grid li {
   list-style: none;
   position: relative;
-  flex: 0 0 calc(100% / 6 - 10px); /* Fixed width for 6 items per row, minus gap */
+  flex: 0 0 calc(100% / 3 - 10px); /* Fixed width for 6 items per row, minus gap */
   height: calc((100vh - 60px) / 6); /* Fixed height for 6 items per column */
 }
 
