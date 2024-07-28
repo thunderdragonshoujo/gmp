@@ -21,7 +21,7 @@ const formSchema = z.object({
   useremail: z.string().email().min(2, {
     message: "Username must be at least 2 characters.",
   }).max(50),
-  userFeedback: z.string().max(4000).optional()
+  msg: z.string().max(4000).optional()
 })
 
 export default function ContactUs() {
@@ -30,14 +30,14 @@ export default function ContactUs() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       useremail: "",
-      userFeedback:"",
+      msg:"Can you help me with ...",
     },
   })
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     var formData = new FormData();
     formData.append("useremail", String(values.useremail)); 
-    formData.append("userFeedback", String(values.userFeedback));
+    formData.append("msg", String(values.msg));
     axios({
       method: "post",
       url: "http://44.239.43.181:8083/LiftAndShift/post",
@@ -79,7 +79,7 @@ export default function ContactUs() {
         />
         <FormField
           control={form.control}
-          name="userFeedback"
+          name="msg"
           render={({ field }) => (
             <FormItem>
               <FormLabel>User Feedback</FormLabel>
