@@ -48,23 +48,19 @@ const MainGrid = () => {
   }, [onScreenTiles, offScreenTiles]);
 
   return (
-    <div style={{ background: "#0033cc", height: "100vh" }}>
-      <ul className="main-grid">
+      <div className="flex flex-wrap col-auto flex-shrink-0">
         {onScreenTiles.map((tile, index) => (
-          <li key={index}>
-            <div className="image-container">
+          <div key={index} className='px-auto shrink-0 max-w-fit'>
               <Image 
                 src={tile} 
                 alt={`tile-${index}`}
-                fill
-                style={{ objectFit: "cover" }}
+                width={400}
+                height={400}
                 onError={(e) => { (e.target as HTMLImageElement).src = "tile-mags.jpg"; }}
               />
-            </div>
-          </li>
+          </div>
         ))}
-      </ul>
-    </div>
+      </div>
   );
 };
 

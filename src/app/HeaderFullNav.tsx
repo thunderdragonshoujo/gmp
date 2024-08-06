@@ -86,7 +86,7 @@ function Header() {
     )
     :
     <Provider store={store}>
-      <div className='sticky top-0 z-50'>
+      <div className='sticky top-0 z-50 min-w-full bg-black'>
       <div className='flex gap-8 columns-3 bg-black text-white font-extrabold'>
         <div>
             <h1 className='text-lg' >Global Microwave Parts</h1>

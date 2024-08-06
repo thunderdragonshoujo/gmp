@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <>
     <html lang="en">
-      <body className='bg-gradient-to-r from-cyan-500 to-blue-500'>
+      <body className='bg-black min-w-100'>
       <Header/>
       {children}
       <Toaster />
