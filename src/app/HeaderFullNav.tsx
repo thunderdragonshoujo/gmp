@@ -58,6 +58,11 @@ function Header() {
                     <button>Fuses</button>
                   </div>
                 </Link>
+                <Link href="/Tstats">
+                  <div>
+                    <button>Tstats</button>
+                  </div>
+                </Link>
                 <CartWidget/>
                 <div className='justify-end'>
             
@@ -125,6 +130,11 @@ function Header() {
                 <Link href="/Fuses">
                   <div>
                     <button>Fuses</button>
+                  </div>
+                </Link>
+                <Link href="/Tstats">
+                  <div>
+                    <button>Tstats</button>
                   </div>
                 </Link>
                 <CartWidget/>

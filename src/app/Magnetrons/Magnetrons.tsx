@@ -242,6 +242,15 @@ const products = [
   // Add more products as needed
 ];
 
+// Format currency values with a dollar sign and two decimal places
+const formatCurrency = (amount) => {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }).format(amount);
+}
 
 
 export default function Magnetron() {
@@ -266,7 +275,7 @@ export default function Magnetron() {
                   />
                 </div>
                 <h3 className="mt-1 text-lg font-medium text-gray-900">{product.product}</h3>
-                <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
+                <p className="mt-1 text-lg font-medium text-gray-900">{formatCurrency(product.price)}</p>
                 <p className="mt-1 text-lg font-medium text-gray-900">{product.desc}</p>
                 <Button onClick={() => dispatch(addToCart(product))}>add to cart</Button>
               </a>

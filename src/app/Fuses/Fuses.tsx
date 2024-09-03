@@ -96,6 +96,16 @@ const products = [
   }
 ];
 
+// Format currency values with a dollar sign and two decimal places
+const formatCurrency = (amount) => {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }).format(amount);
+}
+
 export default function Fuses() {
   const dispatch = useDispatch();
     return (
@@ -116,7 +126,7 @@ export default function Fuses() {
                   />
                 </div>
                 <h3 className="mt-4 text-sm text-gray-700">{product.product}</h3>
-                <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
+                <p className="mt-1 text-lg font-medium text-gray-900">{formatCurrency(product.price)}</p>
                 <Button onClick={() => dispatch(addToCart(product))}>add to cart</Button>
               </a>
             ))}

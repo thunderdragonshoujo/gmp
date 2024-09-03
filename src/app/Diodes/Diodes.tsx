@@ -82,7 +82,7 @@ export default function Diodes() {
                   />
                 </div>
                 <h3 className="mt-4 text-sm text-gray-700">{product.product}</h3>
-                <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
+                <p className="mt-1 text-lg font-medium text-gray-900">$ {product.price}</p>
                 <Button onClick={() => dispatch(addToCart(product))}>add to cart</Button>
               </a>
             ))}
