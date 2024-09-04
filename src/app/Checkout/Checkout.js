@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  incrementQuantity,
-  decrementQuantity,
-  removeFromCart,
+  //incrementQuantity,
+  //decrementQuantity,
+  //removeFromCart,
   clearCart,
 } from '../../../redux/cart.slice';
 import styles from './CartPage.module.css';
