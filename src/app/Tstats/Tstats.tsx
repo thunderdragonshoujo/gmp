@@ -8,8 +8,8 @@ const products = [
     partType: "Thermostat",
     product: "GLC L190",
     price: 10.50,
-    imgSrc: "/DSCN0738.JPG",
-    imgAlt: "/DSCN0738.JPG",
+    imgSrc: "/DSCN0738.jpg",
+    imgAlt: "/DSCN0738.jpg",
     desc: "190 F - 1/4 Terminals"
   },
   {
@@ -17,8 +17,8 @@ const products = [
     partType: "Thermostat",
     product: "GLC L220",
     price: 10.50,
-    imgSrc: "/DSCN0738.JPG",
-    imgAlt: "/DSCN0738.JPG",
+    imgSrc: "/DSCN0738.jpg",
+    imgAlt: "/DSCN0738.jpg",
     desc: "220 F - 1/4 Terminals"
   },
   {
@@ -26,8 +26,8 @@ const products = [
     partType: "Thermostat",
     product: "GLC L260",
     price: 10.50,
-    imgSrc: "/DSCN0738.JPG",
-    imgAlt: "/DSCN0738.JPG",
+    imgSrc: "/DSCN0738.jpg",
+    imgAlt: "/DSCN0738.jpg",
     desc: "260 F - 1/4 Terminals"
   },
   {
@@ -35,8 +35,8 @@ const products = [
     partType: "Thermostat",
     product: "GLC L280",
     price: 10.50,
-    imgSrc: "/DSCN0738.JPG",
-    imgAlt: "/DSCN0738.JPG",
+    imgSrc: "/DSCN0738.jpg",
+    imgAlt: "/DSCN0738.jpg",
     desc: "280 F - 1/4 Terminals"
   },
   {
@@ -44,8 +44,8 @@ const products = [
     partType: "Thermostat",
     product: "GLC L300",
     price: 10.50,
-    imgSrc: "/DSCN0738.JPG",
-    imgAlt: "/DSCN0738.JPG",
+    imgSrc: "/DSCN0738.jpg",
+    imgAlt: "/DSCN0738.jpg",
     desc: "300 F - 1/4 Terminals"
   },
   {
@@ -53,8 +53,8 @@ const products = [
     partType: "Thermostat",
     product: "GLC L350",
     price: 10.50,
-    imgSrc: "/DSCN0739.JPG",
-    imgAlt: "/DSCN0739.JPG",
+    imgSrc: "/DSCN0739.jpg",
+    imgAlt: "/DSCN0739.jpg",
     desc: "350 F - 3/16 Terminals"
   },
   {
@@ -62,11 +62,22 @@ const products = [
     partType: "Thermostat",
     product: "GLC 100 CIT",
     price: 10.50,
-    imgSrc: "/DSCN0737.JPG",
-    imgAlt: "/DSCN0737.JPG",
+    imgSrc: "/DSCN0737.jpg",
+    imgAlt: "/DSCN0737.jpg",
     desc: "100 C - 3/16 Terminals"
   }
 ]
+
+// Format currency values with a dollar sign and two decimal places
+const formatCurrency = (amount: number) => {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }).format(amount);
+}
+
 
 export default function Tstats() {
   const dispatch = useDispatch();
@@ -86,7 +97,7 @@ export default function Tstats() {
                   />
 		</div>
                  <h3 className="mt-1 text-lg font-medium text-gray-900">{product.product}</h3>
-                 <p className="mt-1 text-lg font-medium text-gray-900">$ {product.price}</p>
+                <p className="mt-1 text-lg font-medium text-gray-900">{formatCurrency(product.price)}</p>
                  <p className="mt-1 text-lg font-medium text-gray-900">{product.desc}</p>
                  <Button onClick={() => dispatch(addToCart(product))}>add to cart</Button>
                </a>

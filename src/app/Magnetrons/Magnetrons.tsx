@@ -243,7 +243,7 @@ const products = [
 ];
 
 // Format currency values with a dollar sign and two decimal places
-const formatCurrency = (amount) => {
+const formatCurrency = (amount: number) => {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',

@@ -8,7 +8,7 @@ const products = [
     id: "GLC_HD30",
     partType: "Fuses",
     product: "GLC_HD30",
-    price: "4.90",
+    price: 4.90,
     imgSrc: "/GLC_HD30.JPG",
     imgAlt: "/GLC_HD30.JPG",
     desc:"A basic part with great qualities a good value."
@@ -17,7 +17,7 @@ const products = [
     id: "GLC_FNMH",
     partType:"Fuses",
     product:"GLC_FNMH",
-    price:"11.95",
+    price:11.95,
     imgSrc:"/GLC_FNMH.JPG",
     imgAlt:"/GLC_FNMH.JPG",
     desc:"A basic part with great qualities a good value."
@@ -26,7 +26,7 @@ const products = [
     id: "GLC_FNM-20",
     partType: "Fuses",
     product: "GLC_FNM-20",
-    price: "4.25",
+    price: 4.25,
     imgSrc: "/GLC_FNM-20.JPG",
     imgAlt: "/GLC_FNM-20.JPG",
     desc:"A basic part with great qualities a good value."
@@ -35,7 +35,7 @@ const products = [
     id: "GLC_FNM-25",
     partType:"Fuses",
     product:"GLC_FMN-25",
-    price: "4.25",
+    price: 4.25,
     imgSrc:"/GLC_FNM-25.JPG",
     imgAlt:"/GLC_FNM-25.JPG",
     desc:"A basic part with great qualities a good value."
@@ -44,7 +44,7 @@ const products = [
     id: "GLC_FNM-30",
     partType: "Fuses",
     product: "GLC_FNM-30",
-    price: "4.25",
+    price: 4.25,
     imgSrc: "/GLC_FNM-30.JPG",
     imgAlt: "/GLC_FNM-30.JPG",
     desc:"A basic part with great qualities a good value."
@@ -53,7 +53,7 @@ const products = [
     id: "GLC_4-10",
     partType:"Fuses",
     product:"GLC_4-10",
-    price: "2.50",
+    price: 2.50,
     imgSrc:"/GLC_4-10.JPG",
     imgAlt:"/GLC_4-10.JPG",
     desc:"A basic part with great qualities a good value."
@@ -62,7 +62,7 @@ const products = [
     id: "GLC_4-12",
     partType: "Fuses",
     product: "GLC_4-12",
-    price: "2.50",
+    price: 2.50,
     imgSrc: "/GLC_4-12.JPG",
     imgAlt: "/GLC_4-12.JPG",
     desc:"A basic part with great qualities a good value."
@@ -71,7 +71,7 @@ const products = [
     id: "GLC_4-15",
     partType:"Fuses",
     product:"GLC_4-15",
-    price: "2.50",
+    price: 2.50,
     imgSrc:"/GLC_4-15.JPG",
     imgAlt:"/GLC_4-15.JPG",
     desc:"A basic part with great qualities a good value."
@@ -80,7 +80,7 @@ const products = [
     id: "GLC_4-20",
     partType: "Fuses",
     product: "GLC_4-20",
-    price: "2.50",
+    price: 2.50,
     imgSrc: "/GLC_4-20.JPG",
     imgAlt: "/GLC_4-20.JPG",
     desc:"A basic part with great qualities a good value."
@@ -89,7 +89,7 @@ const products = [
     id: "GLC_4-25",
     partType:"Fuses",
     product:"GLC_4-25",
-    price: "2.50",
+    price: 2.50,
     imgSrc:"/GLC_4-25.JPG",
     imgAlt:"/GLC_4-25.JPG",
     desc:"A basic part with great qualities a good value."
@@ -97,7 +97,7 @@ const products = [
 ];
 
 // Format currency values with a dollar sign and two decimal places
-const formatCurrency = (amount) => {
+const formatCurrency = (amount: number) => {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
