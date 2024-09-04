@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { addToCart } from '../../../redux/cart.slice';
+import { addToCart } from "../../../redux/cart.slice";
 import { useDispatch } from 'react-redux';
 
 const products = [
